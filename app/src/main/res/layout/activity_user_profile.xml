@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userProfile"
+    android:backgroundTint="#F2F2F7">
+
+
+
+    <!-- Edit Profile Button (Top-right) -->
+
+    <!-- User Name -->
+
+    <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:contentDescription="Background Image"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/top7" />
+
+        </FrameLayout>
+
+    <TextView
+        android:id="@+id/profileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Profile"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editIcon"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/backicon"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Edit Profile Button (Top-right) -->
+        <ImageButton
+            android:id="@+id/editIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/editicon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- User Name -->
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/white"
+            android:contentDescription="Profile Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/userpic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/usereName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Leonardo"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/userProfileprofileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="leonardo.1@gmail.com"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/usereName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Profile Section List (CardView for list items) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileSection"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="20dp"
+
+            app:layout_constraintTop_toBottomOf="@id/userProfileprofileEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Profile Option -->
+                <TextView
+                    android:id="@+id/userProfileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Name"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F7F9" />
+
+                <!-- Bookmarked Option -->
+                <TextView
+                    android:id="@+id/userProfileEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Email"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F7F9" />
+
+                <!-- Previous Trips Option -->
+                <TextView
+                    android:id="@+id/userProfileAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Address"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F7F9" />
+
+                <!-- Settings Option -->
+                <TextView
+                    android:id="@+id/userProfileContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Contact Number"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/destination_bottombtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height='65dp'
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btnbg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/usercartbtn"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/checkout" />
+
+            <ImageButton
+                android:id="@+id/userhomebtn"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/homeicon" />
+
+            <ImageButton
+                android:id="@+id/useruserbtn"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/userblueicon"
+                app:srcCompat="@drawable/userblueicon" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
